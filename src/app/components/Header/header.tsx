@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useRef } from 'react';
-import { PanelMenu } from 'primereact/panelmenu';
+import MenuItems from '../menuItems';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { InputText } from 'primereact/inputtext';
 import { IconField } from 'primereact/iconfield';
@@ -152,9 +152,7 @@ const Header = () => {
                         <Image src={bankDashLogo} alt='BankDash' />
                     </div>
                 </div>
-                <nav className="main_menu" >
-                    {/*  <p-panelMenu [model]="items"  /> */}
-                </nav>
+                <MenuItems/>
             </aside>
             <div className="page_title d-block d-md-none" >
                 <div className="container-fluid py-3" >
@@ -165,7 +163,6 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-
             <div className={`overlay ${isMenuVisible ? 'active' : ''}`}> </div>
         </>
     )

@@ -254,11 +254,12 @@ button{
         max-height: calc(100vh - 70px );
 
         .p-panelmenu{
+            .p-panelmenu-panel{
                 .p-panelmenu-header{
                     .p-panelmenu-header-content{
                         background-color: transparent;
                         border: none;
-                        .p-panelmenu-header-action{
+                        .p-panelmenu-header-link{
                             text-decoration: none;
                             font-weight: 400;
                             font-size: 16px;
@@ -281,6 +282,8 @@ button{
                         }
                     }
                 }
+            }
+                
             
         }
 
