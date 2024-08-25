@@ -14,8 +14,8 @@ const Loans = () => {
       { sN: '01.', loanMony: '$100,000', leftRepay: '$40,500', duration: 10, interestRate: '12%', installment: '$2,000 / month' },
       { sN: '02.', loanMony: '$75,000', leftRepay: '$20,000', duration: 8, interestRate: '10%', installment: '$1,500 / month' },
       { sN: '03.', loanMony: '$50,000', leftRepay: '$15,000', duration: 5, interestRate: '8%', installment: '$1,000 / month' },
-      { sN: '04.', loanMony: '$120,000', leftRepay: '$60,000', duration: 12, interestRate: '15%', installment: '$3,000 / month' },
-      { sN: '05.', loanMony: '$90,000', leftRepay: '$30,000', duration: 9, interestRate: '11%', installment: '$2,500 / month' }
+      { sN: '04.', loanMony: '$120,000', leftRepay: '$60,000', duration: 12, interestRate: '15%', installment: '$3,000 / month' }
+     
     ];
 
     const renderRepayButton = (rowData: Record<string, any>) => (
@@ -97,12 +97,12 @@ const Loans = () => {
                 <div className="row" >
                     <div className="col-sm-12 " >
                     <DataTable value={products} tableStyle={{ minWidth: '50rem' }}>
-                        <Column field="sN" header="SL No"></Column>
-                        <Column field="loanMony" header="Loan Money"></Column>
-                        <Column field="leftRepay" header="Left to repay"></Column>
-                        <Column field="duration" header="duration"></Column>
-                        <Column field="interestRate" header="Interest Rate"></Column>
-                        <Column field="installment" header="Installment"></Column>
+                        <Column field="sN" header="SL No" footer="Total" ></Column>
+                        <Column field="loanMony" header="Loan Money" footer="$125,0000" ></Column>
+                        <Column field="leftRepay" header="Left to repay" footer="$750,000" ></Column>
+                        <Column field="duration" header="duration" ></Column>
+                        <Column field="interestRate" header="Interest Rate" ></Column>
+                        <Column field="installment" header="Installment" footer="$50,000 / month" ></Column>
                         <Column header="Repay" body={renderRepayButton}></Column>
                     </DataTable>
          
