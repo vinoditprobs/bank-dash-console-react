@@ -1,3 +1,4 @@
+import Link from "next/link"
 
 const Dashboard = () => {
     return(
@@ -7,6 +8,7 @@ const Dashboard = () => {
                 <div className="row" >
                     <div className="col-sm-12" >
                         <h1>Dashboard</h1>
+                        <p>Click here to go <Link href="/loans" >Loans</Link> Page</p>
                     </div>
                 </div>
             </div>
