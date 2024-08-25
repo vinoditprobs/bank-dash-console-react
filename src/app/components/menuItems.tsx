@@ -3,15 +3,17 @@ import { usePathname } from 'next/navigation';
 
 const MenuItems = () => {
 
-const pagePath = usePathname()
+const pagePath = usePathname();
+
+
 
   const menuItems = [
-    { label: "Dashboard", icon: "pi pi-home", url: "/dashboard", exact: true },
+    { label: "Dashboard", icon: "pi pi-home", url: "/", exact: false },
     { label: "Transactions", icon: "pi pi-transactions", url: "/transactions" },
     { label: "Accounts", icon: "pi pi-accounts" },
     { label: "Investments", icon: "pi pi-investments" },
     { label: "Credit Cards", icon: "pi pi-creditCard" },
-    { label: "Loans", icon: "pi pi-loans", url: "/loans" },
+    { label: "Loans", icon: "pi pi-loans", url: "/loans/"  },
     { label: "Services", icon: "pi pi-services" },
     { label: "My Privileges", icon: "pi pi-privileges" },
     { label: "Setting", icon: "pi pi-setting" },
