@@ -1,8 +1,9 @@
 
+
 const Loans = () => {
     return(
         <main>
-            <section>
+         <section>
             <div  className="container">
                 <div className="row" >
                     <div className="col-sm-12" >
@@ -10,8 +11,8 @@ const Loans = () => {
                     </div>
                 </div>
             </div>
-            </section>
-      </main>
+         </section>
+       </main>
     )
 }
 export default Loans
