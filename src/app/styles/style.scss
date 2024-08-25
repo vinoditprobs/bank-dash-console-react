@@ -376,10 +376,11 @@ button{
         .p-datatable-tfoot{
             background-color: #fff;
             tr{
-                th{
+                td{
                     padding: 1rem 1rem;
                     color: $secondary;
                     font-weight: 500;
+                    background-color: transparent;
                 }
             }
         }
