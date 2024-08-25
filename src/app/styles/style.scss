@@ -280,7 +280,7 @@ button{
                             vertical-align: middle;
                         }
                     }
-                    &.p-menuitem-link-active{
+                    &.active{
                         color: $primary;
                         .p-menuitem-icon{
                             filter: grayscale(0);

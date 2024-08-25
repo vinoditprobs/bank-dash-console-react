@@ -1,7 +1,10 @@
-import { PanelMenu } from "primereact/panelmenu";
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 
 const MenuItems = () => {
+
+const pagePath = usePathname()
+
   const menuItems = [
     { label: "Dashboard", icon: "pi pi-home", url: "/dashboard", exact: true },
     { label: "Transactions", icon: "pi pi-transactions", url: "/transactions" },
@@ -20,7 +23,7 @@ const MenuItems = () => {
         {menuItems.map((item, index) => (
           <li key={index}>
             {item.url && (
-              <Link href={item.url} className="nav_link">
+              <Link href={item.url} className={`nav_link ${pagePath === item.url ? 'active' : ''}`}  > 
                  <span className='p-menuitem-icon' ><i className={`pi ${item.icon}`} ></i></span>
                 <span className="p-menuitem-text" >{item.label}</span>
               </Link>
