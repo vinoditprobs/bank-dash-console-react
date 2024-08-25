@@ -1,0 +1,446 @@
+/* You can add global styles to this file, and also import other style files */
+$primary: #1814F3;
+$primaryLight: #F5F7FA;
+$secondary: #D62328;
+$lightGray: #F1F3F6;
+$headerFont: "Roboto", sans-serif !important;
+$textColor: #343C6A !important;
+$textBlueLight: #8BA3CB;
+$blueLight:#E7EDFF;
+$yellowLight:#FFF5D9;
+$magentaLight:#FFE0EB;
+$cyanLight:#DCFAF8;
+$blue:#396AFF;
+$yellow:#FFBB38;
+$magenta:#FF82AC;
+$cyan:#16DBCC;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import "~bootstrap/scss/bootstrap";
+@import "primereact/resources/themes/lara-light-blue/theme.css";
+@import "primereact/resources/primereact.min.css";
+@import "primeicons/primeicons.css";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    background-color: $primaryLight;
+    color: $textColor;
+    padding-top: 70px;
+    font-size: 14px;
+    ::selection {
+        background-color: rgba($color: $primary, $alpha: 0.5);
+        color: white;
+    }
+    .wrapper{
+        main{
+          padding: 1rem;  
+          min-height: calc(100vh - 128px);
+        }
+    }
+}
+
+.bg-primary-light{
+    background-color: $primaryLight !important;
+}
+.bg-blue-light{
+    background-color: $blueLight !important;
+}
+.bg-yellow-light{
+    background-color: $yellowLight !important;
+}
+.bg-magenta-light{
+    background-color: $magentaLight !important;
+}
+.bg-cyan-light{
+    background-color: $cyanLight !important;
+}
+
+
+.text-blue-light{
+    color: $textBlueLight !important;
+}
+
+.text-yellow-light{
+    color: $yellowLight !important;
+}
+.text-magenta-light{
+    color: $magentaLight !important;
+}
+.text-cyan-light{
+   color: $cyanLight !important;
+}
+
+.text-blue{
+    color: $blue !important;
+}
+.text-yellow{
+    color: $yellow !important;
+}
+.text-magenta{
+    color: $magenta !important;
+}
+.text-cyan{
+    color: $cyan !important;
+}
+
+
+p {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+button{
+    &.clear{
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.p-inputtext{
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 40px;
+    background-color: #F5F7FA;
+    color: #718EBF;
+    border-color: #F5F7FA;
+    border-radius: 3em;
+    box-shadow: none !important;
+    font-size: 14px;
+    :focus{
+        border-color: #718EBF;
+    }
+}
+
+
+
+
+
+.p_icon {
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $white;
+    background-color: #F5F7FA;
+    color: #718EBF;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+    font-size: 1.1em;
+    text-decoration: none;
+    overflow: hidden;
+    vertical-align: middle;
+    i {
+        font-size: 1.1em;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &.rounded {
+        border-radius: 50% !important;
+    }
+
+    &:hover {
+        background-color: $white;
+        color: $black;
+    }
+
+    &.cursor_scale {
+        cursor: pointer;
+        transition: all ease 0.25s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &.xs {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 0.85em;
+
+        i {
+            font-size: 0.85em;
+        }
+    }
+
+    &.sm {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 1em;
+
+        i {
+            font-size: 1em;
+        }
+    }
+
+    &.md {
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 1.05em;
+
+        i {
+            font-size: 1.5em;
+        }
+    }
+
+    &.lg {
+        width: 52px;
+        height: 52px;
+        line-height: 52px;
+        font-size: 1.2em;
+
+        i {
+            font-size: 1.2em;
+        }
+    }
+
+    &.xl {
+        width: 62px;
+        height: 62px;
+        line-height: 62px;
+        font-size: 2em;
+
+        i {
+            font-size: 2em;
+        }
+    }
+}
+
+
+
+.aside_nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    border-right: 1px solid #E6EFF5;
+    z-index: 99;
+    height: 100vh;
+    width: 100%;
+    max-width: 240px;
+    transition: transform cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+    transform: translateX(-100%);
+    .main_logo_wrapp{
+        height: 70px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 1.5rem;
+    }
+    .main_menu{
+
+        overflow-y: auto;
+        max-height: calc(100vh - 70px );
+
+        .p-panelmenu{
+                .p-panelmenu-header{
+                    .p-panelmenu-header-content{
+                        background-color: transparent;
+                        border: none;
+                        .p-panelmenu-header-action{
+                            text-decoration: none;
+                            font-weight: 400;
+                            font-size: 16px;
+                            color: #B1B1B1;
+                            padding: 1.25rem 1.5rem;
+                            .p-menuitem-icon{
+                                color: #8d8d8d;
+                                font-size: 24px;
+                                margin-right: 1rem;
+                                filter: grayscale(1);
+                                opacity: 0.3;
+                            }
+                            &.p-menuitem-link-active{
+                                color: $primary;
+                                .p-menuitem-icon{
+                                    filter: grayscale(0);
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            
+        }
+
+        .pi{
+            &.pi-home, &.pi-transactions, &.pi-services, &.pi-accounts, &.pi-investments, &.pi-creditCard, &.pi-loans, &.pi-privileges, &.pi-setting {
+                width: 22px;
+                height: 22px;
+                background-image: url("/icons/home.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                &::before{
+                    display: none;
+                }
+            }
+            &.pi-transactions{
+                background-image: url("/icons/transactions.svg");
+            }
+            &.pi-services{
+                background-image: url("/icons/services.svg");
+            }
+            &.pi-accounts{
+                background-image: url("/icons/accounts.svg");
+            }
+            &.pi-investments{
+                background-image: url("/icons/investments.svg");
+            }
+            &.pi-creditCard{
+                background-image: url("/icons/creditCards.svg");
+            }
+            &.pi-loans {
+                background-image: url("/icons/loans.svg");
+            }
+            &.pi-privileges{
+                background-image: url("/icons/privileges.svg");
+            }
+            &.pi-setting{
+                background-image: url("/icons/setting.svg");
+            }
+        }
+    }
+
+    &.active{
+        transform: translateX(0);
+    }
+}
+
+
+.card{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1.25em;
+    border: none;
+    overflow: hidden;
+    &.bordered{
+        border:1px solid #DDDDDD
+    }
+}
+
+
+.p-datatable{
+    font-size: 14px;
+    .p-datatable-wrapper{
+        border-radius: 1.25em;
+        padding: 0.5rem;
+        background-color: #ffffff;
+        .p-datatable-tbody{
+            > tr{
+                border-bottom: 1px solid #E6EFF5;
+                > td{
+
+                }
+            }
+        }
+        .p-datatable-thead{
+            > tr {
+                border-bottom: 1px solid #E6EFF5;
+                > th{
+                    background-color: #ffffff;
+                    font-weight: 500;
+                    color: $textBlueLight;
+                }
+            }
+        }
+        .p-datatable-tfoot{
+            background-color: #fff;
+            tr{
+                th{
+                    padding: 1rem 1rem;
+                    color: $secondary;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    
+}
+
+
+.fs-7{
+    font-size: 0.9rem;
+}
+
+.list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li{
+    
+        a{
+            width: 100%;
+        }
+    }
+    &.bordered{
+        li{
+            border-top: 1px solid #DDDDDD;
+        }
+    }
+}
+
+.link{
+    display: inline-block;
+    padding: 0.75rem 0;
+    text-decoration: none;
+    color: #3A3839;
+    &:hover{
+        color: #000000 ;
+    }
+}
+
+
+.p-overlaypanel {
+    box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.15);
+    .p-overlaypanel-close {
+        right: 12px;
+        top: 12px;
+        background: none;
+        color: #3A3839;
+    }
+}
+
+@media (min-width: 992px) {
+    .aside_nav{
+        transform: translateX(0);
+    }
+    body{
+        padding-top: 70px;
+        .wrapper{
+            padding-left: 240px;
+            main{
+                padding: 2rem;
+                min-height: calc(100vh - 70px);
+            }
+        }
+    }
+    .card{
+        width: 100%;
+        padding: 1.25rem;
+        border-radius: 1.5em;
+        border: none;
+        overflow: hidden;
+    }
+}
