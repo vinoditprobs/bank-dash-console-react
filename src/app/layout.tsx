@@ -16,7 +16,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header/>
-        {children}</body>
+        <div className="wrapper" >
+          {children}
+        </div>
+        </body>
     </html>
   );
 }
