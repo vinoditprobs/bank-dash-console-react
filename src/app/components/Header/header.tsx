@@ -9,6 +9,7 @@ import Image from 'next/image';
 import bankDashLogo from '/public/images/bank-dash.svg';
 import profilePic from '/public/images/profile-pic.png';
 import './header.scss'
+import { usePageTitleContext } from '@/app/context/pageName';
 
 const Header = () => {
     const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -18,6 +19,9 @@ const Header = () => {
     const toggleMenu = () => {
         setIsMenuVisible(!isMenuVisible);
     }
+
+    const {getPageTitle} = usePageTitleContext();
+   
 
     return (
         <>
@@ -34,7 +38,7 @@ const Header = () => {
                         <div className="col" >
                             <div className="row gx-lg-5 align-items-center" >
                                 <div className="col-sm-12 col-md-4 d-none d-md-block" >
-                                    {/*<h4 className="mb-0" >{{pageName}}</h4> */}
+                                    <h4 className="mb-0" >{getPageTitle}</h4> 
                                 </div>
                                 <div className="col-sm-12 col-md-8 text-end " >
                                     <div className="d-inline-flex align-items-center gap-2" >
@@ -158,7 +162,7 @@ const Header = () => {
                 <div className="container-fluid py-3" >
                     <div className="row" >
                         <div className="col-sm-12" >
-                            {/*<h4 className="mb-0" >{{pageName}}</h4> */}
+                            <h4 className="mb-0" >{getPageTitle}</h4>
                         </div>
                     </div>
                 </div>

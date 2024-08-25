@@ -7,8 +7,14 @@ import businessLoanImg from '/public/icons/business-loan.svg';
 import customLoanImg from '/public/icons/custom-loan.svg';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
+import { usePageTitleContext } from "../context/pageName";
+import { useEffect } from "react";
 
 const Loans = () => {
+
+    const pageTitle = "Loans"
+
+    const {setPageTitle} = usePageTitleContext()
 
     const products = [
       { sN: '01.', loanMony: '$100,000', leftRepay: '$40,500', duration: 10, interestRate: '12%', installment: '$2,000 / month' },
@@ -23,6 +29,9 @@ const Loans = () => {
           Repay
         </button>
       );
+
+    useEffect(()=>{setPageTitle(pageTitle)},[setPageTitle])  
+
 
     return(
         <main>

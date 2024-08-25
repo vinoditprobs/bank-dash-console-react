@@ -1,10 +1,11 @@
+'use client'
 import { createContext, useContext, useState } from "react";
 
 const pageTitleContext = createContext<any>(null);
 
-export const pageTitleWrapper = ({children} : {children: React.ReactNode}) => {
+export const PageTitleWrapper = ({children} : {children: React.ReactNode}) => {
 
-    const [getPageTitle, setPageTitle] = useState(null)
+    const [getPageTitle, setPageTitle] = useState('Home')
 
     return(
         <pageTitleContext.Provider value={{getPageTitle, setPageTitle}} >
