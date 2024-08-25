@@ -253,41 +253,46 @@ button{
         overflow-y: auto;
         max-height: calc(100vh - 70px );
 
-        .p-panelmenu{
-            .p-panelmenu-panel{
-                .p-panelmenu-header{
-                    .p-panelmenu-header-content{
-                        background-color: transparent;
-                        border: none;
-                        .p-panelmenu-header-link{
-                            text-decoration: none;
-                            font-weight: 400;
-                            font-size: 16px;
-                            color: #B1B1B1;
-                            padding: 1.25rem 1.5rem;
-                            .p-menuitem-icon{
-                                color: #8d8d8d;
-                                font-size: 24px;
-                                margin-right: 1rem;
-                                filter: grayscale(1);
-                                opacity: 0.3;
-                            }
-                            &.p-menuitem-link-active{
-                                color: $primary;
-                                .p-menuitem-icon{
-                                    filter: grayscale(0);
-                                    opacity: 1;
-                                }
-                            }
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li{
+                display: block;
+                width: 100%;
+                .nav_link{
+                    text-decoration: none;
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: #B1B1B1;
+                    padding: 1.25rem 1.5rem;
+                    display: inline-flex;
+                    align-items: center;
+                    width: 100%;
+                    .p-menuitem-icon{
+                        color: #8d8d8d;
+                        font-size: 24px;
+                        margin-right: 1rem;
+                        display: inline-flex;
+                        filter: grayscale(1);
+                        opacity: 0.3;
+                        .pi{
+                            vertical-align: middle;
+                        }
+                    }
+                    &.p-menuitem-link-active{
+                        color: $primary;
+                        .p-menuitem-icon{
+                            filter: grayscale(0);
+                            opacity: 1;
                         }
                     }
                 }
             }
-                
-            
         }
 
         .pi{
+            
             &.pi-home, &.pi-transactions, &.pi-services, &.pi-accounts, &.pi-investments, &.pi-creditCard, &.pi-loans, &.pi-privileges, &.pi-setting {
                 width: 22px;
                 height: 22px;
