@@ -9,7 +9,7 @@ const pagePath = usePathname();
 
   const menuItems = [
     { label: "Dashboard", icon: "pi pi-home", url: "/", exact: false },
-    { label: "Transactions", icon: "pi pi-transactions", url: "/transactions" },
+    { label: "Transactions", icon: "pi pi-transactions" },
     { label: "Accounts", icon: "pi pi-accounts" },
     { label: "Investments", icon: "pi pi-investments" },
     { label: "Credit Cards", icon: "pi pi-creditCard" },
