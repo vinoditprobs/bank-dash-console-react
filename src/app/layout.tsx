@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import  Header  from "./components/Header/header";
 import "./styles/style.scss";
+import { pageTitleWrapper } from "./context/pageName";
 
 export const metadata: Metadata = {
   title: "BankDash Console",
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+          
         <Header/>
         <div className="wrapper" >
           {children}
